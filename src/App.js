@@ -1,4 +1,5 @@
 import React from 'react';
+import './components/Todo.css'
 import TodoData from './TodoData'
 import TodoList from './components/TodoList'
 import TodoForm from './components/TodoForm'
@@ -48,7 +49,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="content">
         <h1>My Todo List</h1>
         <TodoList list={this.state.todoList} handleClick={this.handleClick}/>
         <TodoForm

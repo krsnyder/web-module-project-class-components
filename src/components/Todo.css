@@ -4,6 +4,18 @@
   box-sizing: border-box;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid black;
+  border-radius: 5px;
+  width: 30vw;
+  margin: auto;
+  padding: 2vw;
+}
+
 .completed {
   text-decoration: line-through;
   opacity: 50%;
