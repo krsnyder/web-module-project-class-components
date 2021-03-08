@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+h1 { 
+  margin-bottom: 2vw;
+}
+
 .content {
   display: flex;
   flex-direction: column;
@@ -11,12 +15,23 @@
   justify-content: center;
   border: 3px solid black;
   border-radius: 5px;
-  width: 30vw;
+  width: 40vw;
   margin: auto;
   padding: 2vw;
+}
+
+.list-item:hover{
+  cursor: pointer;
 }
 
 .completed {
   text-decoration: line-through;
   opacity: 50%;
+}
+
+p {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 3px 5px;
+  margin: 1vw 0;
 }

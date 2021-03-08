@@ -1,10 +1,15 @@
 import React from 'react'
 
 export default function Todo(props) {
-  // console.log(props)
+  const toggle = () => {
+    props.handleClick(props.item.id)
+  }
+
   return (
-    <div>
-      <p>{props.todoItem.task}</p>
+    <div
+      onClick={toggle}
+      className={`${props.item.completed ? 'completed' : 'list-item'}`}>
+      <p>{props.item.task}</p>
     </div>
   )
 }

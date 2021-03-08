@@ -5,7 +5,7 @@ import TodoForm from './components/TodoForm'
 
 const TodoData = [
   {
-    task: "Module 1 Project",
+    task: "First Task",
     id: "001",
     completed: false
   }
@@ -16,7 +16,7 @@ class App extends React.Component {
     super();
     this.state = {
       todoList: TodoData,
-      value: "todo"
+      value: ""
     }
   }
 
@@ -43,7 +43,14 @@ class App extends React.Component {
   onSubmit = (e) => {
     e.preventDefault()
     this.setState({
-      todoList: [...this.state.todoList, this.state.value]
+      todoList: [
+        ...this.state.todoList,
+        {
+          task: this.state.value,
+          id: Date.now(),
+          completed: false
+        }
+      ]
     })
   }
 
@@ -59,7 +66,11 @@ class App extends React.Component {
     return (
       <div className="content">
         <h1>My Todo List</h1>
-        <TodoList list={this.state.todoList} handleClick={this.handleClick}/>
+        <TodoList
+          list={this.state.todoList}
+          clearCompleted={this.clearCompleted}
+          handleClick={this.handleClick}
+        />
         <TodoForm
           onChange={this.onChange}
           onSubmit={this.onSubmit}

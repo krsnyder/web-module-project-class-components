@@ -7,7 +7,12 @@ export default function TodoList(props) {
     <div>
       {props.list.map(item => {
         return (
-          <Todo todoItem={item} />
+          <Todo
+            item={item}
+            key={item.id}
+            handleClick={props.handleClick}
+            clearCompleted={props.clearCompleted}
+          />
         )
       }
     )}
