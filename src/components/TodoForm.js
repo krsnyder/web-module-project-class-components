@@ -8,8 +8,8 @@ export default function TodoForm(props) {
         <input
           type="text"
           name="todo"
+          value={props.value}
           onChange={props.onChange}
-          value={props.todoValue}
         />
         <button type="submit">Add Todo</button>
       </form>

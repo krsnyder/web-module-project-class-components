@@ -5,7 +5,12 @@ export default function TodoList(props) {
 
   return (
     <div>
-      <Todo todoItem={props.todoValue}/>
+      {props.list.map(item => {
+        return (
+          <Todo todoItem={item} />
+        )
+      }
+    )}
     </div>
   )
 }
