@@ -3,19 +3,13 @@ import './components/Todo.css'
 import TodoList from './components/TodoList'
 import TodoForm from './components/TodoForm'
 
-const TodoData = [
-  {
-    task: "First Task",
-    id: "001",
-    completed: false
-  }
-];
+const TodoData = [];
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      todoList: TodoData,
+      todoList: localStorage.getItem("")? JSON.parse("todoList") : TodoData,
       value: ""
     }
   }
@@ -53,9 +47,11 @@ class App extends React.Component {
       ],
       value: ""
     })
+    localStorage.setItem("todoList", JSON.stringify(this.state.todoList))
   }
 
   clearCompleted = () => {
+    localStorage.setItem("todoList", [])
     this.setState({
       todoList: this.state.todoList.filter(item =>
         item.completed === false
