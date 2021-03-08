@@ -1,9 +1,11 @@
 const TodoData = [
     {
-      task: "",
-      id: "",
+      task: "Module 1 Project",
+      id: "001",
       completed: true
     }
   ];
 
-export default TodoData
+const formValue = "";
+
+export default {TodoData, formValue}
