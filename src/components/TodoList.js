@@ -4,7 +4,7 @@ import Todo from './Todo'
 export default function TodoList(props) {
 
   return (
-    <div>
+    <div className="todo-container">
       {props.list.map(item => {
         return (
           <Todo
