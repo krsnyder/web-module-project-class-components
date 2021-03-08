@@ -6,7 +6,7 @@
 
 body {
   margin: 2vw;
-  background-image: url(../river.jpg);
+  background-image: url(../wp3304506.jpg);
 }
 
 h1 { 
@@ -26,7 +26,7 @@ button {
 
 button:hover{
   scale: 1.1;
-  background-color: rgb(140, 168, 38);
+  background-color: rgb(13, 121, 148);
 }
 
 .content {
