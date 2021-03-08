@@ -1,11 +1,11 @@
 import React from 'react'
 import Todo from './Todo'
 
-export default function TodoList() {
+export default function TodoList(props) {
 
   return (
     <div>
-      <Todo todoItem={ this.state.todoValue}/>
+      <Todo todoItem={props.todoValue}/>
     </div>
   )
 }

@@ -1,15 +1,15 @@
 import React from 'react'
 
-export default function TodoForm() {
+export default function TodoForm(props) {
 
   return (
     <div>
-      <form onSubmit={this.state.onSubmit}>
+      <form onSubmit={props.onSubmit}>
         <input
           type="text"
           name="todo"
-          onChange={this.state.onChange}
-          value={this.state.todoValue}
+          onChange={props.onChange}
+          value={props.todoValue}
         />
         <button type="submit">Add Todo</button>
       </form>
