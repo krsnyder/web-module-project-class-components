@@ -7,21 +7,33 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      todoList: TodoData,
-      formValue: 
+      todoList: TodoData
     }
   }
 
+  handleClick = (itemId) => {
+    this.setState({
+      todoList: this.state.todoList.map(item => {
+        if (item.id === itemId) {
+          return(toDolist)
+        }
+        return(item)
+      })
+    })
+  }
 
-  // you will need a place to store your state in this component.
-  // design `App` to be the parent component of your application.
-  // this component is going to take care of state, and any change handlers you need to work with your state
+  onSubmit = (value) => {
+    this.setState({
+      todoList: [...todoList, value]
+    })
+  }
+
   render() {
     return (
       <div>
         <h1>My Todo List</h1>
-        <TodoList list={this.state.todoList} />
-        <TodoForm />
+        <TodoList list={this.state.todoList} handleClick={this.handleClick}/>
+        <TodoForm onSubmit={ onSubmit }/>
       </div>
     );
   }
