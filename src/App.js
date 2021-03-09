@@ -53,9 +53,7 @@ class App extends React.Component {
   clearCompleted = () => {
     localStorage.setItem("todoList", [])
     this.setState({
-      todoList: this.state.todoList.filter(item =>
-        item.completed === false
-      )
+      todoList: this.state.todoList.filter(item => !item.completed)
     })
   }
 
